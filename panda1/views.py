@@ -36,14 +36,14 @@ def alumnos(request):
 
     if request.method == 'POST':
 
-        miFormulario = Alumnos(request.POST)
+        miFormulario2 = Alumnos(request.POST)
 
-        print(miFormulario)
+        print(miFormulario2)
     
-        if miFormulario.isvalid:
-            informacion = miFormulario.cleaned_data
+        if miFormulario2.isvalid:
+            informacion2 = miFormulario2.cleaned_data
 
-            alumno = Alumnos (nombre=informacion['nombre'] , dni=informacion['dni'])
+            alumno = Alumnos (nombre=informacion2['nombre'] , dni=informacion2['dni'])
 
             alumno.save()
 
@@ -51,4 +51,4 @@ def alumnos(request):
 
     else:
 
-        miFormulario = Alumnos()
+        miFormulario2 = Alumnos()
