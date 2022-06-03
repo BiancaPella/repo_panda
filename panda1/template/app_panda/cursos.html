@@ -2,6 +2,12 @@
 {% load static %}
  {% block contenidoQueCambia %} 
     <h1>Cursos</h1>
-    
+    <from action="" method="POST"> {% csrf_token %}
+
+      <table>
+         {{miFormulario.as_table}}
+      </table>
+
+    </from>
 
  {% endblock %}
